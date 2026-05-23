@@ -1,21 +1,27 @@
 package model;
 
-public class ContaCorrente {
+public class ContaCorrente extends Conta {
+    private double limite;
+    private double cartao;
+    private int taxa;
 
-    private double agencia;
-    private String senha;
-
-    public ContaCorrente(double agencia, String senha) {
-        this.agencia = agencia;
-        this.senha = senha;
+    public ContaCorrente(int agencia, Cliente titular, double saldo, int numeroConta,double limite, double cartao, int taxa) {
+        super(agencia, titular, saldo, numeroConta);
+        this.limite = limite;
+        this.cartao = cartao;
+        this.taxa = taxa;
     }
 
-    public double getAgencia() {
-        return agencia;
+    public double getLimite() {
+        return limite;
     }
 
-    public String getSenha() {
-        return senha;
+    public double getCartao() {
+        return cartao;
     }
-    
+
+    public int getTaxa() {
+        return taxa;
+    }
+
 }
