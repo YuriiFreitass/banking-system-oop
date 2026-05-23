@@ -2,10 +2,10 @@ package model;
 
 public class Cliente {
     private String nome;
-    private double CPF;
+    private String CPF;
     private String senha;
 
-    public Cliente(String nome, double CPF, String senha) {
+    public Cliente(String nome, String CPF, String senha) {
         this.nome = nome;
         this.CPF = CPF;
         this.senha = senha;
@@ -15,7 +15,7 @@ public class Cliente {
         return nome;
     }
 
-    public double getCPF() {
+    public String getCPF() {
         return CPF;
     }
 

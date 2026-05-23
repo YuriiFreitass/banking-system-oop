@@ -13,8 +13,23 @@ public class Conta {
         this.saldo = saldo;
         this.numeroConta = numeroConta;
     }
+    public void sacar(double valor) {
+            if (saldo < valor) {
+                System.out.println("O valor insuficiente");
+            } else {
+                saldo = saldo - valor;
+                System.out.println("Saque realizado!");
+        }
+        System.out.println("Saldo atual: " + saldo);
+
+    }
+    public void depositar(double valor){
+        saldo = saldo + valor;
+        System.out.println("Depósito relizado com sucesso!");
+        System.out.println("Saldo atual: "  + saldo);
 
 
+    }
     public int getAgencia() {
         return agencia;
     }
