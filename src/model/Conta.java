@@ -1,5 +1,7 @@
 package model;
 
+import exception.SaldoInsuficienteException;
+
 public class Conta {
     private int agencia;
     private Cliente titular;
@@ -15,7 +17,7 @@ public class Conta {
     }
     public void sacar(double valor) {
             if (saldo < valor) {
-                System.out.println("O valor insuficiente");
+              throw new SaldoInsuficienteException("Valor insuficiente");
             } else {
                 saldo = saldo - valor;
                 System.out.println("Saque realizado!");
