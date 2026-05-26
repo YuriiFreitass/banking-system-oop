@@ -18,19 +18,12 @@ public class Conta {
     public void sacar(double valor) {
             if (saldo < valor) {
               throw new SaldoInsuficienteException("Valor insuficiente");
-            } else {
-                saldo = saldo - valor;
-                System.out.println("Saque realizado!");
-        }
-        System.out.println("Saldo atual: " + saldo);
+            }
+                saldo -= valor;
 
     }
     public void depositar(double valor){
-        saldo = saldo + valor;
-        System.out.println("Depósito relizado com sucesso!");
-        System.out.println("Saldo atual: "  + saldo);
-
-
+       saldo += valor;
     }
     public int getAgencia() {
         return agencia;
