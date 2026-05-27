@@ -1,96 +1,68 @@
-# Banking System OOP
+# 🏦 Banking System OOP
 
-Sistema bancário desenvolvido em Java com foco em Programação Orientada a Objetos (OOP).
+[![Java](https://img.shields.io/badge/Java-17%2B-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.java.com)
+[![OOP](https://img.shields.io/badge/OOP-Orientação%20a%20Objetos-4CAF50?style=for-the-badge)](https://github.com/YuriiFreitass/banking-system-oop)
+[![Status](https://img.shields.io/badge/Status-Concluído-brightgreen?style=for-the-badge)](https://github.com/YuriiFreitass/banking-system-oop)
+
+Sistema bancário desenvolvido em Java com foco em **Programação Orientada a Objetos**.
 
 O projeto simula operações bancárias básicas utilizando modelagem orientada a objetos, regras de negócio e separação de responsabilidades.
 
 ---
 
-# Features
+## ⚙️ Funcionalidades
 
-## Contas bancárias
-
-* Criação de contas
-* Conta Corrente
-* Conta Poupança
-* Associação entre Cliente e Conta
-
-## Operações
-
-* Depósito
-* Saque
-* Transferência entre contas
-* Busca de conta por número
-
-## Regras de negócio
-
-* Validação de saldo insuficiente
-* Exception customizada para operações inválidas
+| Módulo | Funcionalidades |
+|--------|----------------|
+| 🏛️ Contas | Conta Corrente e Conta Poupança |
+| 💰 Operações | Depósito, saque e transferência |
+| 🔍 Busca | Busca de conta por número |
+| ✅ Validações | Saldo insuficiente com exception customizada |
 
 ---
 
-# Conceitos aplicados
+## 🧠 Conceitos aplicados
 
-## Encapsulamento
-
-Os atributos foram protegidos com `private` e acessados através de getters.
-
-## Herança
-
-`ContaCorrente` e `ContaPoupanca` herdam da classe `Conta`.
-
-## Associação
-
-Cada conta possui um titular do tipo `Cliente`.
-
-## Service Layer
-
-A lógica principal do sistema foi separada na classe:
-
-```java
-BancoService
-```
-
-Responsável por:
-
-* cadastrar contas
-* buscar contas
-* transferências
-
-## Exceptions customizadas
-
-Foi criada a exception:
-
-```java
-SaldoInsuficienteException
-```
-
-Utilizada para impedir saques inválidos.
+| Conceito | Descrição |
+|----------|-----------|
+| 🔒 Encapsulamento | Atributos protegidos com getters |
+| 🧬 Herança | `ContaCorrente` e `ContaPoupanca` herdam de `Conta` |
+| 🔗 Associação | Cada conta possui um `Cliente` como titular |
+| 🏗️ Service Layer | `BancoService` centraliza as regras de negócio |
+| ⚠️ Exception customizada | `SaldoInsuficienteException` para saques inválidos |
 
 ---
 
-# Estrutura do projeto
-
-```text
-src
- ├── model
- │    ├── Cliente
- │    ├── Conta
- │    ├── ContaCorrente
- │    └── ContaPoupanca
- │
- ├── service
- │    └── BancoService
- │
- ├── exception
- │    └── SaldoInsuficienteException
- │
- └── Main
-```
+## 🗂️ Estrutura do projeto
+src/
+├── model/
+│    ├── Cliente.java
+│    ├── Conta.java
+│    ├── ContaCorrente.java
+│    └── ContaPoupanca.java
+├── service/
+│    └── BancoService.java
+├── exception/
+│    └── SaldoInsuficienteException.java
+└── Main.java
 
 ---
 
-# Exemplo de uso
+
+## 🚀 Como executar
+
+```bash
+# Clone o repositório
+git clone https://github.com/YuriiFreitass/banking-system-oop.git
+
+# Abra o projeto no IntelliJ IDEA e execute Main.java
+```
+
+> Requisito: **Java 17+**
+
+---
+
+## 💡 Exemplo de uso
 
 ```java
 conta.depositar(500);
@@ -100,34 +72,27 @@ banco.transferir(conta1, conta2, 100);
 
 ---
 
-# Objetivo do projeto
+## 🔮 Melhorias futuras
 
-Este projeto foi desenvolvido para consolidar fundamentos de Java e Programação Orientada a Objetos através da construção de um sistema bancário simples.
-
-Durante o desenvolvimento foram praticados conceitos importantes de backend, modelagem de entidades e organização de código.
-
----
-
-# Melhorias futuras
-
-* Menu interativo com Scanner
-* Persistência de dados
-* Conta abstrata
-* Polimorfismo avançado
-* Interface gráfica
-* Integração com banco de dados
+- [ ] Menu interativo com Scanner
+- [ ] Persistência de dados
+- [ ] Integração com banco de dados
+- [ ] Conta abstrata com polimorfismo
+- [ ] Extrato com histórico de transações
 
 ---
 
-# Tecnologias
+## 🛠️ Tecnologias
 
-* Java
-* IntelliJ IDEA
-* Git
-* GitHub
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=flat-square&logo=intellij-idea&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
 
 ---
 
-# Autor
+## 👨‍💻 Autor
 
-Yuri Freitas
+Feito com 💙 por **Yuri Freitas**
+
+[![GitHub](https://img.shields.io/badge/GitHub-YuriiFreitass-181717?style=flat-square&logo=github)](https://github.com/YuriiFreitass)
